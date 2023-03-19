@@ -1,10 +1,7 @@
 "use strict";
 
 const numberOfFilms = +prompt("How many films have you watched?", "");
-let a = prompt("Last watched film?", ""),
-    b = prompt("How would you rate it?", ""),
-    c = prompt("Last watched film?", ""),
-    g = prompt("How would you rate it?", "");
+
 const personalMovieDB = {
     count: numberOfFilms,
     movies: {},
@@ -13,6 +10,10 @@ const personalMovieDB = {
     privat: false
 };
 
-personalMovieDB.movies[a] = b;
-personalMovieDB.movies[c] = g;
+for (let q = 0; q < 2; q++) {
+    let a = prompt("Last watched film?", ""),
+        b = prompt("How would you rate it?", "");
+    personalMovieDB.movies[a] = b;
+}
+
 console.log(personalMovieDB);

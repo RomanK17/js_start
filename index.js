@@ -19,7 +19,7 @@ const personalMovieDB = {
     count: numberOfFilms,
     movies: {},
     actors: {},
-    genres: [genre1, genre2, genre3],
+    genres: [],
     privat: false
 };
 
@@ -56,7 +56,7 @@ twoLatestFilms();
 
 function writeYourGenres() {
     for (let genresQuestion = 1; genresQuestion <= 3; genresQuestion++) {
-        personalMovieDB.genres[genresQuestion] = prompt(`What's your favorite genre? ${genresQuestion}`, "");
+        personalMovieDB.genres[genresQuestion - 1] = prompt(`What's your favorite genre? ${genresQuestion}`, "");
     }
     console.log(personalMovieDB.genres);
 }
